@@ -1,0 +1,1 @@
+from modul.Modul_Bintang import Aproksimasi_Kecerahan_Sederhana
