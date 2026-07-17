@@ -12,6 +12,17 @@ def Perkiraan_kecerahan_sederhana(M):
     Berdasarkan https://worldbuildingpasta.blogspot.com/2019/06/an-apple-pie-f
     rom-scratch-part-ii-stars.html#simpleapproximations
     """
+
+    try:
+        M = float(M)
+    except ValueError:
+        print("Input yang dimasukkan bukan sebuah angka, tolong masukkan sebuah angka")
+    else:
+        if  0.08 < M < 300: #penggunanya nakal? marahin 
+            pass
+        else: #Pengguna pintar
+            print("Input yang dimasukkan diluar rentang, rentang yang diterima adalah 0.08Msol - 300Msol")
+
     if 0.08 <= M < 0.43:
         return 0.23*M**2.3
     elif 0.43 <= M < 2:
@@ -32,6 +43,16 @@ def Perkiraan_kecerahan_Eker2018(M):
 
     Berdasarkan https://academic.oup.com/mnras/article/479/4/5491/5056185
     """
+    try:
+        M = float(M)
+    except ValueError:
+        print("Input yang dimasukkan bukan sebuah angka, tolong masukkan sebuah angka")
+    else:
+        if  0.179 < M < 31: #penggunanya nakal? marahin 
+            pass
+        else: #Pengguna pintar
+            print("Input yang dimasukkan diluar rentang, rentang yang diterima adalah 0.179Msol - 31Msol")
+    
     if 0.179 < M <= 0.45:
         return 10**(2.028*ma.log10(M)-0.976)
     if 0.45 < M <= 0.72:
@@ -54,7 +75,17 @@ def Perkiraan_kecerahan_Manfred2018(M):
     Output
     L : float
 
-    Berdasarkan https://academic.oup.com/mnras/article/479/4/5491/5056185
+    Berdasarkan https://iopscience.iop.org/article/10.3847/2515-5172/aaaa67
     """
+
+    try:
+        M = float(M)
+    except ValueError:
+        print("Input yang dimasukkan bukan sebuah angka, tolong masukkan sebuah angka")
+    else:
+        if  0.25 < M < 0.75: #penggunanya nakal? marahin 
+            pass
+        else: #Pengguna pintar
+            print("Input yang dimasukkan diluar rentang, rentang yang diterima adalah 0.25Msol - 0.75Msol")
 
     return M ** (-141.7*M**4 + 232.4*M**3 - 129.1*M**2 + 33.29*M + 0.215)
