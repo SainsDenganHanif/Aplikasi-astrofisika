@@ -1,9 +1,18 @@
+import math as ma
+
 def Pengecek_error(X,Rb,Ra):
     """
     Sebuah fungsi yang memberi batasan input dan memberi peringatan bila input diluar batasan dan/atau bukan sebuah float
+    BENTUK : Pengecek_error(X,Rb,Ra)
+
+    INPUT : 
     X   : Input yang ingin divalidasi
     Rb  : Rentang rendah input 
     Ra  : Rentang atas input
+
+    OUTPUT : 
+    True bila input sesuai keinginan
+    False bila tidak
     """
     #cek Rb dan Ra
     try: #Error checker didalam error checker💀
@@ -31,3 +40,9 @@ def Pengecek_error(X,Rb,Ra):
         else: 
             print(f"Input yang dimasukkan diluar rentang, rentang yang diterima adalah {Rb} - {Ra}, anda memasukkan {X}")
             return False
+
+def R_dari_L_dan_T(L,T):
+    return ma.sqrt(L)/(T/5778)**2
+
+def T_dari_L_dan_R(L,R):
+    return 5778*ma.sqrt(ma.sqrt(L)/R)
