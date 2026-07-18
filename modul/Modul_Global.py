@@ -1,0 +1,33 @@
+def Pengecek_error(X,Rb,Ra):
+    """
+    Sebuah fungsi yang memberi batasan input dan memberi peringatan bila input diluar batasan dan/atau bukan sebuah float
+    X   : Input yang ingin divalidasi
+    Rb  : Rentang rendah input 
+    Ra  : Rentang atas input
+    """
+    #cek Rb dan Ra
+    try: #Error checker didalam error checker💀
+        Rb = float(Rb) 
+        Ra = float(Ra)  #Coba ubah Rentang jadi float
+    except ValueError: #kalau gk bisa
+        print("Input yang dimasukkan bukan sebuah angka, tolong masukkan sebuah angka")
+        return False
+    else: #kalau bisa...
+        if Ra <= Rb: #Nah secara matematis bisa gk...
+            print("Rentang atas harus lebih besar daripada rentang bawah")
+            return False
+        else:
+            pass #GOOD BOY!
+
+    #Nah baru cek X
+    try: 
+        X = float(X) #Coba ubah input jadi float
+    except ValueError: #kalau gk bisa
+        print(f"Input yang dimasukkan bukan sebuah angka, anda memasukkan {type(X)}. Tolong masukkan sebuah angka")
+        return False
+    else:
+        if  Rb <= X <= Ra:  #Masuk gk...
+            return True
+        else: 
+            print(f"Input yang dimasukkan diluar rentang, rentang yang diterima adalah {Rb} - {Ra}, anda memasukkan {X}")
+            return False
