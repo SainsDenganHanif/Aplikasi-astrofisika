@@ -1,6 +1,6 @@
 import math as ma
 
-def Pengecek_error(X,Rb,Ra):
+def  Validasi_Input(X,Rb,Ra):
     """
     Sebuah fungsi yang memberi batasan input dan memberi peringatan bila input diluar batasan dan/atau bukan sebuah float
     BENTUK : Pengecek_error(X,Rb,Ra)
